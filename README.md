@@ -15,7 +15,7 @@ This starter kit was bootstrapped with [Create React App](https://github.com/fac
 
 First you have to fork this repository. Then you need to create an **.env.local** with the same content as **.env.example**.
 
-That configuration provides information that will be used by `ExampleMakerDaoCpdEngine` component to communicate with the [MakerDao](https://thegraph.com/explorer/subgraph/protofire/makerdao) subgraph deployed in theGraph.
+That configuration provides information that will be used by `ExampleContainer` component to communicate with the [Opyn](https://thegraph.com/explorer/subgraph/aparnakr/opyn) subgraph deployed in theGraph.
 _(This configuration should be overwritten with the subgraph you want to communicate with)._
 
 You can generate the types for the GQL Queries and Subscriptions by running `npm generateGQLTypes`, this command will search the schema exposed by graphql (it's defined in .env.local in key **REACT_APP_GRAPH_HTTP**) and then will generate a file in `/src/types/generatedGQL.ts` with the types needed for your queries. Note that this command should be executed each time the schema changes.

@@ -3,47 +3,27 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: GetCdpEngine
+// GraphQL query operation: GetOptionsFactory
 // ====================================================
 
-export interface GetCdpEngine_cdpEngine {
-  __typename: "CdpEngine";
-  id: string;
-  cdpCount: number;
-  openCdpCount: number;
-  totalCollateral: any;
-  totalDebt: any;
-  lastBlock: any;
-  lastModifiedDate: any;
-  cdpOwners: any[];
+export interface GetOptionsFactory_optionsFactories_actions {
+  __typename: 'OptionsContractCreated' | 'AssetAdded' | 'AssetChanged' | 'AssetDeleted' | 'FactoryOwnershipTransferred'
+  /**
+   *  Equals to: <actionType>-<transactionHash>-<logIndex>
+   */
+  id: string
 }
 
-export interface GetCdpEngine {
-  cdpEngine: GetCdpEngine_cdpEngine | null;
+export interface GetOptionsFactory_optionsFactories {
+  __typename: 'OptionsFactory'
+  id: string
+  optionsExchangeAddress: any
+  owner: any
+  actions: GetOptionsFactory_optionsFactories_actions[] | null
 }
 
-/* tslint:disable */
-/* eslint-disable */
-// This file was automatically generated and should not be edited.
-
-// ====================================================
-// GraphQL subscription operation: CdpEngine
-// ====================================================
-
-export interface CdpEngine_cdpEngine {
-  __typename: "CdpEngine";
-  id: string;
-  cdpCount: number;
-  openCdpCount: number;
-  totalCollateral: any;
-  totalDebt: any;
-  lastBlock: any;
-  lastModifiedDate: any;
-  cdpOwners: any[];
-}
-
-export interface CdpEngine {
-  cdpEngine: CdpEngine_cdpEngine | null;
+export interface GetOptionsFactory {
+  optionsFactories: GetOptionsFactory_optionsFactories[]
 }
 
 /* tslint:disable */
@@ -51,19 +31,27 @@ export interface CdpEngine {
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL fragment: CdpEngineDetail
+// GraphQL subscription operation: optionsFactory
 // ====================================================
 
-export interface CdpEngineDetail {
-  __typename: "CdpEngine";
-  id: string;
-  cdpCount: number;
-  openCdpCount: number;
-  totalCollateral: any;
-  totalDebt: any;
-  lastBlock: any;
-  lastModifiedDate: any;
-  cdpOwners: any[];
+export interface optionsFactory_optionsFactories_actions {
+  __typename: 'OptionsContractCreated' | 'AssetAdded' | 'AssetChanged' | 'AssetDeleted' | 'FactoryOwnershipTransferred'
+  /**
+   *  Equals to: <actionType>-<transactionHash>-<logIndex>
+   */
+  id: string
+}
+
+export interface optionsFactory_optionsFactories {
+  __typename: 'OptionsFactory'
+  id: string
+  optionsExchangeAddress: any
+  owner: any
+  actions: optionsFactory_optionsFactories_actions[] | null
+}
+
+export interface optionsFactory {
+  optionsFactories: optionsFactory_optionsFactories[]
 }
 
 /* tslint:disable */
